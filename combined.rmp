@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_csv" compatibility="7.6.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
-        <parameter key="csv_file" value="C:\Users\rlochner\Downloads\Assignment1-dataset.csv"/>
+        <parameter key="csv_file" value="D:\data-mining-2017\Assignment1-dataset.csv"/>
         <parameter key="column_separators" value=";"/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
@@ -110,186 +110,8 @@
         <parameter key="unexpected_value_handling" value="all 0 and warning"/>
         <parameter key="use_underscore_in_name" value="false"/>
       </operator>
-      <operator activated="true" class="multiply" compatibility="7.6.001" expanded="true" height="145" name="Multiply" width="90" x="45" y="289"/>
-      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename (2)" width="90" x="45" y="1309">
-        <parameter key="old_name" value="y = yes"/>
-        <parameter key="new_name" value="y"/>
-        <list key="rename_additional_attributes"/>
-      </operator>
-      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Select Attributes (2)" width="90" x="179" y="1309">
-        <parameter key="attribute_filter_type" value="single"/>
-        <parameter key="attribute" value="y = no"/>
-        <parameter key="attributes" value=""/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="attribute_value"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="time"/>
-        <parameter key="block_type" value="attribute_block"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_matrix_row_start"/>
-        <parameter key="invert_selection" value="true"/>
-        <parameter key="include_special_attributes" value="false"/>
-      </operator>
-      <operator activated="true" class="split_data" compatibility="7.6.001" expanded="true" height="103" name="Split Data (2)" width="90" x="313" y="1156">
-        <enumeration key="partitions">
-          <parameter key="ratio" value="0.7"/>
-          <parameter key="ratio" value="0.3"/>
-        </enumeration>
-        <parameter key="sampling_type" value="automatic"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
-      </operator>
-      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (4)" width="90" x="581" y="1411">
-        <parameter key="attribute_filter_type" value="single"/>
-        <parameter key="attribute" value="y"/>
-        <parameter key="attributes" value="y = no|y"/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="attribute_value"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="time"/>
-        <parameter key="block_type" value="attribute_block"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_matrix_row_start"/>
-        <parameter key="invert_selection" value="true"/>
-        <parameter key="include_special_attributes" value="true"/>
-      </operator>
-      <operator activated="true" class="normalize" compatibility="7.6.001" expanded="true" height="103" name="Normalize (2)" width="90" x="715" y="1309">
-        <parameter key="return_preprocessing_model" value="false"/>
-        <parameter key="create_view" value="false"/>
-        <parameter key="attribute_filter_type" value="all"/>
-        <parameter key="attribute" value=""/>
-        <parameter key="attributes" value=""/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="numeric"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="real"/>
-        <parameter key="block_type" value="value_series"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_series_end"/>
-        <parameter key="invert_selection" value="false"/>
-        <parameter key="include_special_attributes" value="false"/>
-        <parameter key="method" value="range transformation"/>
-        <parameter key="min" value="0.0"/>
-        <parameter key="max" value="1.0"/>
-        <parameter key="allow_negative_values" value="false"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role (3)" width="90" x="514" y="1207">
-        <parameter key="attribute_name" value="y"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="normalize" compatibility="7.6.001" expanded="true" height="103" name="Normalize (3)" width="90" x="648" y="1156">
-        <parameter key="return_preprocessing_model" value="false"/>
-        <parameter key="create_view" value="false"/>
-        <parameter key="attribute_filter_type" value="all"/>
-        <parameter key="attribute" value=""/>
-        <parameter key="attributes" value=""/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="numeric"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="real"/>
-        <parameter key="block_type" value="value_series"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_series_end"/>
-        <parameter key="invert_selection" value="false"/>
-        <parameter key="include_special_attributes" value="false"/>
-        <parameter key="method" value="range transformation"/>
-        <parameter key="min" value="0.0"/>
-        <parameter key="max" value="1.0"/>
-        <parameter key="allow_negative_values" value="false"/>
-      </operator>
-      <operator activated="true" class="support_vector_machine" compatibility="7.6.001" expanded="true" height="124" name="SVM" width="90" x="782" y="1156">
-        <parameter key="kernel_type" value="dot"/>
-        <parameter key="kernel_gamma" value="1.0"/>
-        <parameter key="kernel_sigma1" value="1.0"/>
-        <parameter key="kernel_sigma2" value="0.0"/>
-        <parameter key="kernel_sigma3" value="2.0"/>
-        <parameter key="kernel_shift" value="1.0"/>
-        <parameter key="kernel_degree" value="2.0"/>
-        <parameter key="kernel_a" value="1.0"/>
-        <parameter key="kernel_b" value="0.0"/>
-        <parameter key="kernel_cache" value="200"/>
-        <parameter key="C" value="0.0"/>
-        <parameter key="convergence_epsilon" value="0.001"/>
-        <parameter key="max_iterations" value="100"/>
-        <parameter key="scale" value="true"/>
-        <parameter key="calculate_weights" value="true"/>
-        <parameter key="return_optimization_performance" value="true"/>
-        <parameter key="L_pos" value="1.0"/>
-        <parameter key="L_neg" value="1.0"/>
-        <parameter key="epsilon" value="0.0"/>
-        <parameter key="epsilon_plus" value="0.0"/>
-        <parameter key="epsilon_minus" value="0.0"/>
-        <parameter key="balance_cost" value="false"/>
-        <parameter key="quadratic_loss_pos" value="false"/>
-        <parameter key="quadratic_loss_neg" value="false"/>
-        <parameter key="estimate_performance" value="false"/>
-      </operator>
-      <operator activated="true" class="apply_model" compatibility="7.6.001" expanded="true" height="82" name="Apply Model (2)" width="90" x="916" y="1207">
-        <list key="application_parameters"/>
-        <parameter key="create_view" value="false"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role for y normalizing" width="90" x="1050" y="1156">
-        <parameter key="attribute_name" value="prediction(y)"/>
-        <parameter key="target_role" value="regular"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="normalize" compatibility="7.6.001" expanded="true" height="103" name="Normalize (4)" width="90" x="1184" y="1156">
-        <parameter key="return_preprocessing_model" value="false"/>
-        <parameter key="create_view" value="false"/>
-        <parameter key="attribute_filter_type" value="single"/>
-        <parameter key="attribute" value="prediction(y)"/>
-        <parameter key="attributes" value=""/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="numeric"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="real"/>
-        <parameter key="block_type" value="value_series"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_series_end"/>
-        <parameter key="invert_selection" value="false"/>
-        <parameter key="include_special_attributes" value="false"/>
-        <parameter key="method" value="range transformation"/>
-        <parameter key="min" value="0.0"/>
-        <parameter key="max" value="1.0"/>
-        <parameter key="allow_negative_values" value="false"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role y back to prediction" width="90" x="1318" y="1156">
-        <parameter key="attribute_name" value="prediction(y)"/>
-        <parameter key="target_role" value="prediction"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="join" compatibility="7.6.001" expanded="true" height="82" name="Join (3)" width="90" x="1050" y="1309">
-        <parameter key="remove_double_attributes" value="true"/>
-        <parameter key="join_type" value="inner"/>
-        <parameter key="use_id_attribute_as_key" value="true"/>
-        <list key="key_attributes"/>
-        <parameter key="keep_both_join_attributes" value="false"/>
-      </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role (4)" width="90" x="1184" y="1309">
-        <parameter key="attribute_name" value="y"/>
-        <parameter key="target_role" value="label"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="performance_regression" compatibility="7.6.001" expanded="true" height="82" name="Performance SVM" width="90" x="1452" y="1309">
-        <parameter key="main_criterion" value="first"/>
-        <parameter key="root_mean_squared_error" value="true"/>
-        <parameter key="absolute_error" value="false"/>
-        <parameter key="relative_error" value="false"/>
-        <parameter key="relative_error_lenient" value="false"/>
-        <parameter key="relative_error_strict" value="false"/>
-        <parameter key="normalized_absolute_error" value="false"/>
-        <parameter key="root_relative_squared_error" value="false"/>
-        <parameter key="squared_error" value="false"/>
-        <parameter key="correlation" value="false"/>
-        <parameter key="squared_correlation" value="false"/>
-        <parameter key="prediction_average" value="false"/>
-        <parameter key="spearman_rho" value="false"/>
-        <parameter key="kendall_tau" value="false"/>
-        <parameter key="skip_undefined_labels" value="true"/>
-        <parameter key="use_example_weights" value="true"/>
-      </operator>
-      <operator activated="true" class="numerical_to_polynominal" compatibility="7.6.001" expanded="true" height="82" name="Numerical to Polynominal (2)" width="90" x="45" y="952">
+      <operator activated="true" class="multiply" compatibility="7.6.001" expanded="true" height="124" name="Multiply" width="90" x="45" y="289"/>
+      <operator activated="true" class="numerical_to_polynominal" compatibility="7.6.001" expanded="true" height="82" name="Numerical to Polynominal (2)" width="90" x="179" y="799">
         <parameter key="attribute_filter_type" value="single"/>
         <parameter key="attribute" value="y = yes"/>
         <parameter key="attributes" value=""/>
@@ -303,12 +125,12 @@
         <parameter key="invert_selection" value="false"/>
         <parameter key="include_special_attributes" value="false"/>
       </operator>
-      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename (3)" width="90" x="179" y="952">
+      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename (3)" width="90" x="313" y="799">
         <parameter key="old_name" value="y = yes"/>
         <parameter key="new_name" value="y"/>
         <list key="rename_additional_attributes"/>
       </operator>
-      <operator activated="true" class="split_data" compatibility="7.6.001" expanded="true" height="103" name="Split Data (3)" width="90" x="313" y="952">
+      <operator activated="true" class="split_data" compatibility="7.6.001" expanded="true" height="103" name="Split Data (3)" width="90" x="447" y="799">
         <enumeration key="partitions">
           <parameter key="ratio" value="0.7"/>
           <parameter key="ratio" value="0.3"/>
@@ -317,7 +139,7 @@
         <parameter key="use_local_random_seed" value="false"/>
         <parameter key="local_random_seed" value="1992"/>
       </operator>
-      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (3)" width="90" x="581" y="1054">
+      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (3)" width="90" x="581" y="901">
         <parameter key="attribute_filter_type" value="subset"/>
         <parameter key="attribute" value="y = no"/>
         <parameter key="attributes" value="y = no|y"/>
@@ -476,12 +298,12 @@
         <parameter key="use_example_weights" value="true"/>
         <list key="class_weights"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role" width="90" x="514" y="952">
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role" width="90" x="581" y="697">
         <parameter key="attribute_name" value="y"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (2)" width="90" x="648" y="952">
+      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (2)" width="90" x="715" y="697">
         <parameter key="attribute_filter_type" value="subset"/>
         <parameter key="attribute" value="y = no"/>
         <parameter key="attributes" value="y = no"/>
@@ -495,7 +317,7 @@
         <parameter key="invert_selection" value="true"/>
         <parameter key="include_special_attributes" value="true"/>
       </operator>
-      <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="7.6.001" expanded="true" height="82" name="Decision Tree" width="90" x="782" y="952">
+      <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="7.6.001" expanded="true" height="82" name="Decision Tree" width="90" x="849" y="697">
         <parameter key="criterion" value="gain_ratio"/>
         <parameter key="maximal_depth" value="20"/>
         <parameter key="apply_pruning" value="true"/>
@@ -506,23 +328,23 @@
         <parameter key="minimal_size_for_split" value="4"/>
         <parameter key="number_of_prepruning_alternatives" value="3"/>
       </operator>
-      <operator activated="true" class="apply_model" compatibility="7.6.001" expanded="true" height="82" name="Apply Model (3)" width="90" x="983" y="1003">
+      <operator activated="true" class="apply_model" compatibility="7.6.001" expanded="true" height="82" name="Apply Model (3)" width="90" x="983" y="799">
         <list key="application_parameters"/>
         <parameter key="create_view" value="false"/>
       </operator>
-      <operator activated="true" class="join" compatibility="7.6.001" expanded="true" height="82" name="Join (2)" width="90" x="1184" y="1054">
+      <operator activated="true" class="join" compatibility="7.6.001" expanded="true" height="82" name="Join (2)" width="90" x="1117" y="850">
         <parameter key="remove_double_attributes" value="true"/>
         <parameter key="join_type" value="inner"/>
         <parameter key="use_id_attribute_as_key" value="true"/>
         <list key="key_attributes"/>
         <parameter key="keep_both_join_attributes" value="false"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role (2)" width="90" x="1318" y="1054">
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role (2)" width="90" x="1251" y="850">
         <parameter key="attribute_name" value="y"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance Tree" width="90" x="1519" y="1054">
+      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance Tree" width="90" x="1385" y="850">
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -549,7 +371,26 @@
         <parameter key="use_example_weights" value="true"/>
         <list key="class_weights"/>
       </operator>
-      <operator activated="true" class="split_data" compatibility="7.6.001" expanded="true" height="103" name="Split Data (4)" width="90" x="246" y="646">
+      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename to y (2)" width="90" x="112" y="1309">
+        <parameter key="old_name" value="y = yes"/>
+        <parameter key="new_name" value="y"/>
+        <list key="rename_additional_attributes"/>
+      </operator>
+      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove &quot;y = no&quot;" width="90" x="246" y="1309">
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="y = no"/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="true"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="split_data" compatibility="7.6.001" expanded="true" height="103" name="Split Data (2)" width="90" x="380" y="1309">
         <enumeration key="partitions">
           <parameter key="ratio" value="0.7"/>
           <parameter key="ratio" value="0.3"/>
@@ -558,34 +399,15 @@
         <parameter key="use_local_random_seed" value="false"/>
         <parameter key="local_random_seed" value="1992"/>
       </operator>
-      <operator activated="true" class="k_medoids" compatibility="7.6.001" expanded="true" height="82" name="Clustering (2)" width="90" x="380" y="595">
-        <parameter key="add_cluster_attribute" value="true"/>
-        <parameter key="add_as_label" value="false"/>
-        <parameter key="remove_unlabeled" value="false"/>
-        <parameter key="k" value="2"/>
-        <parameter key="max_runs" value="2"/>
-        <parameter key="max_optimization_steps" value="2"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
-        <parameter key="measure_types" value="MixedMeasures"/>
-        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
-        <parameter key="nominal_measure" value="NominalDistance"/>
-        <parameter key="numerical_measure" value="EuclideanDistance"/>
-        <parameter key="divergence" value="GeneralizedIDivergence"/>
-        <parameter key="kernel_type" value="radial"/>
-        <parameter key="kernel_gamma" value="1.0"/>
-        <parameter key="kernel_sigma1" value="1.0"/>
-        <parameter key="kernel_sigma2" value="0.0"/>
-        <parameter key="kernel_sigma3" value="2.0"/>
-        <parameter key="kernel_degree" value="3.0"/>
-        <parameter key="kernel_shift" value="1.0"/>
-        <parameter key="kernel_a" value="1.0"/>
-        <parameter key="kernel_b" value="0.0"/>
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role y as label" width="90" x="514" y="1258">
+        <parameter key="attribute_name" value="y"/>
+        <parameter key="target_role" value="label"/>
+        <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (5)" width="90" x="380" y="697">
-        <parameter key="attribute_filter_type" value="subset"/>
-        <parameter key="attribute" value="y = no"/>
-        <parameter key="attributes" value="y = no|y = yes"/>
+      <operator activated="true" class="select_attributes" compatibility="7.6.001" expanded="true" height="82" name="Remove y-labels (4)" width="90" x="514" y="1360">
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="y"/>
+        <parameter key="attributes" value="y = no|y"/>
         <parameter key="use_except_expression" value="false"/>
         <parameter key="value_type" value="attribute_value"/>
         <parameter key="use_value_type_exception" value="false"/>
@@ -596,54 +418,64 @@
         <parameter key="invert_selection" value="true"/>
         <parameter key="include_special_attributes" value="true"/>
       </operator>
-      <operator activated="true" class="apply_model" compatibility="7.6.001" expanded="true" height="82" name="Apply Model (4)" width="90" x="581" y="595">
+      <operator activated="true" class="support_vector_machine" compatibility="7.6.001" expanded="true" height="124" name="SVM" width="90" x="648" y="1156">
+        <parameter key="kernel_type" value="dot"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_degree" value="2.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="kernel_cache" value="200"/>
+        <parameter key="C" value="10.0"/>
+        <parameter key="convergence_epsilon" value="0.001"/>
+        <parameter key="max_iterations" value="100"/>
+        <parameter key="scale" value="true"/>
+        <parameter key="calculate_weights" value="true"/>
+        <parameter key="return_optimization_performance" value="true"/>
+        <parameter key="L_pos" value="1.0"/>
+        <parameter key="L_neg" value="1.0"/>
+        <parameter key="epsilon" value="0.0"/>
+        <parameter key="epsilon_plus" value="0.0"/>
+        <parameter key="epsilon_minus" value="0.0"/>
+        <parameter key="balance_cost" value="false"/>
+        <parameter key="quadratic_loss_pos" value="false"/>
+        <parameter key="quadratic_loss_neg" value="false"/>
+        <parameter key="estimate_performance" value="false"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="7.6.001" expanded="true" height="82" name="Apply Model (2)" width="90" x="782" y="1258">
         <list key="application_parameters"/>
         <parameter key="create_view" value="false"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role (5)" width="90" x="715" y="595">
-        <parameter key="attribute_name" value="cluster"/>
+      <operator activated="true" class="join" compatibility="7.6.001" expanded="true" height="82" name="Join (3)" width="90" x="648" y="1462">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="inner"/>
+        <parameter key="use_id_attribute_as_key" value="true"/>
+        <list key="key_attributes"/>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename to prediction" width="90" x="782" y="1462">
+        <parameter key="old_name" value="prediction(y)"/>
+        <parameter key="new_name" value="prediction"/>
+        <list key="rename_additional_attributes"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="prediction as regular" width="90" x="916" y="1462">
+        <parameter key="attribute_name" value="prediction"/>
         <parameter key="target_role" value="regular"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="map" compatibility="7.6.001" expanded="true" height="82" name="Map (2)" width="90" x="849" y="595">
-        <parameter key="attribute_filter_type" value="single"/>
-        <parameter key="attribute" value="cluster"/>
-        <parameter key="attributes" value=""/>
-        <parameter key="use_except_expression" value="false"/>
-        <parameter key="value_type" value="attribute_value"/>
-        <parameter key="use_value_type_exception" value="false"/>
-        <parameter key="except_value_type" value="time"/>
-        <parameter key="block_type" value="attribute_block"/>
-        <parameter key="use_block_type_exception" value="false"/>
-        <parameter key="except_block_type" value="value_matrix_row_start"/>
-        <parameter key="invert_selection" value="false"/>
-        <parameter key="include_special_attributes" value="false"/>
-        <list key="value_mappings"/>
-        <parameter key="replace_what" value="cluster_0"/>
-        <parameter key="replace_by" value="0"/>
-        <parameter key="consider_regular_expressions" value="false"/>
-        <parameter key="add_default_mapping" value="true"/>
-        <parameter key="default_value" value="1"/>
+      <operator activated="true" class="generate_attributes" compatibility="7.6.001" expanded="true" height="82" name="Generate binary prediction" width="90" x="1050" y="1462">
+        <list key="function_descriptions">
+          <parameter key="binary" value="if(prediction &gt; 10, 1, 0)"/>
+        </list>
+        <parameter key="keep_all" value="true"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role Prediction (2)" width="90" x="983" y="595">
-        <parameter key="attribute_name" value="cluster"/>
-        <parameter key="target_role" value="prediction"/>
-        <list key="set_additional_roles"/>
-      </operator>
-      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename to y (2)" width="90" x="1117" y="595">
-        <parameter key="old_name" value="cluster"/>
-        <parameter key="new_name" value="prediction(y)"/>
-        <list key="rename_additional_attributes"/>
-      </operator>
-      <operator activated="true" class="rename" compatibility="7.6.001" expanded="true" height="82" name="Rename (4)" width="90" x="581" y="748">
-        <parameter key="old_name" value="y = yes"/>
-        <parameter key="new_name" value="y"/>
-        <list key="rename_additional_attributes"/>
-      </operator>
-      <operator activated="true" class="numerical_to_polynominal" compatibility="7.6.001" expanded="true" height="82" name="Numerical to Polynominal (3)" width="90" x="715" y="748">
-        <parameter key="attribute_filter_type" value="single"/>
-        <parameter key="attribute" value="y"/>
-        <parameter key="attributes" value=""/>
+      <operator activated="true" class="numerical_to_binominal" compatibility="7.6.001" expanded="true" height="82" name="Numerical to Binominal" width="90" x="916" y="1309">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="y||binary"/>
         <parameter key="use_except_expression" value="false"/>
         <parameter key="value_type" value="numeric"/>
         <parameter key="use_value_type_exception" value="false"/>
@@ -653,20 +485,20 @@
         <parameter key="except_block_type" value="value_series_end"/>
         <parameter key="invert_selection" value="false"/>
         <parameter key="include_special_attributes" value="false"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="0.0"/>
       </operator>
-      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="Set Role Label (2)" width="90" x="849" y="748">
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="binary as prediciton" width="90" x="1050" y="1309">
+        <parameter key="attribute_name" value="binary"/>
+        <parameter key="target_role" value="prediction"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="7.6.001" expanded="true" height="82" name="y as label" width="90" x="1184" y="1309">
         <parameter key="attribute_name" value="y"/>
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="join" compatibility="7.6.001" expanded="true" height="82" name="Join (4)" width="90" x="1318" y="697">
-        <parameter key="remove_double_attributes" value="true"/>
-        <parameter key="join_type" value="inner"/>
-        <parameter key="use_id_attribute_as_key" value="true"/>
-        <list key="key_attributes"/>
-        <parameter key="keep_both_join_attributes" value="false"/>
-      </operator>
-      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance k-means (2)" width="90" x="1452" y="697">
+      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance" width="90" x="1318" y="1309">
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -699,26 +531,8 @@
       <connect from_op="Filter Examples" from_port="example set output" to_op="Nominal to Numerical" to_port="example set input"/>
       <connect from_op="Nominal to Numerical" from_port="example set output" to_op="Multiply" to_port="input"/>
       <connect from_op="Multiply" from_port="output 1" to_op="Split Data" to_port="example set"/>
-      <connect from_op="Multiply" from_port="output 2" to_op="Split Data (4)" to_port="example set"/>
-      <connect from_op="Multiply" from_port="output 3" to_op="Numerical to Polynominal (2)" to_port="example set input"/>
-      <connect from_op="Multiply" from_port="output 4" to_op="Rename (2)" to_port="example set input"/>
-      <connect from_op="Rename (2)" from_port="example set output" to_op="Select Attributes (2)" to_port="example set input"/>
-      <connect from_op="Select Attributes (2)" from_port="example set output" to_op="Split Data (2)" to_port="example set"/>
-      <connect from_op="Split Data (2)" from_port="partition 1" to_op="Set Role (3)" to_port="example set input"/>
-      <connect from_op="Split Data (2)" from_port="partition 2" to_op="Remove y-labels (4)" to_port="example set input"/>
-      <connect from_op="Remove y-labels (4)" from_port="example set output" to_op="Normalize (2)" to_port="example set input"/>
-      <connect from_op="Remove y-labels (4)" from_port="original" to_op="Join (3)" to_port="right"/>
-      <connect from_op="Normalize (2)" from_port="example set output" to_op="Apply Model (2)" to_port="unlabelled data"/>
-      <connect from_op="Set Role (3)" from_port="example set output" to_op="Normalize (3)" to_port="example set input"/>
-      <connect from_op="Normalize (3)" from_port="example set output" to_op="SVM" to_port="training set"/>
-      <connect from_op="SVM" from_port="model" to_op="Apply Model (2)" to_port="model"/>
-      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Set Role for y normalizing" to_port="example set input"/>
-      <connect from_op="Set Role for y normalizing" from_port="example set output" to_op="Normalize (4)" to_port="example set input"/>
-      <connect from_op="Normalize (4)" from_port="example set output" to_op="Set Role y back to prediction" to_port="example set input"/>
-      <connect from_op="Set Role y back to prediction" from_port="example set output" to_op="Join (3)" to_port="left"/>
-      <connect from_op="Join (3)" from_port="join" to_op="Set Role (4)" to_port="example set input"/>
-      <connect from_op="Set Role (4)" from_port="example set output" to_op="Performance SVM" to_port="labelled data"/>
-      <connect from_op="Performance SVM" from_port="performance" to_port="result 3"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Numerical to Polynominal (2)" to_port="example set input"/>
+      <connect from_op="Multiply" from_port="output 3" to_op="Rename to y (2)" to_port="example set input"/>
       <connect from_op="Numerical to Polynominal (2)" from_port="example set output" to_op="Rename (3)" to_port="example set input"/>
       <connect from_op="Rename (3)" from_port="example set output" to_op="Split Data (3)" to_port="example set"/>
       <connect from_op="Split Data (3)" from_port="partition 1" to_op="Set Role" to_port="example set input"/>
@@ -747,27 +561,28 @@
       <connect from_op="Join (2)" from_port="join" to_op="Set Role (2)" to_port="example set input"/>
       <connect from_op="Set Role (2)" from_port="example set output" to_op="Performance Tree" to_port="labelled data"/>
       <connect from_op="Performance Tree" from_port="performance" to_port="result 2"/>
-      <connect from_op="Split Data (4)" from_port="partition 1" to_op="Clustering (2)" to_port="example set"/>
-      <connect from_op="Split Data (4)" from_port="partition 2" to_op="Remove y-labels (5)" to_port="example set input"/>
-      <connect from_op="Clustering (2)" from_port="cluster model" to_op="Apply Model (4)" to_port="model"/>
-      <connect from_op="Remove y-labels (5)" from_port="example set output" to_op="Apply Model (4)" to_port="unlabelled data"/>
-      <connect from_op="Remove y-labels (5)" from_port="original" to_op="Rename (4)" to_port="example set input"/>
-      <connect from_op="Apply Model (4)" from_port="labelled data" to_op="Set Role (5)" to_port="example set input"/>
-      <connect from_op="Set Role (5)" from_port="example set output" to_op="Map (2)" to_port="example set input"/>
-      <connect from_op="Map (2)" from_port="example set output" to_op="Set Role Prediction (2)" to_port="example set input"/>
-      <connect from_op="Set Role Prediction (2)" from_port="example set output" to_op="Rename to y (2)" to_port="example set input"/>
-      <connect from_op="Rename to y (2)" from_port="example set output" to_op="Join (4)" to_port="left"/>
-      <connect from_op="Rename (4)" from_port="example set output" to_op="Numerical to Polynominal (3)" to_port="example set input"/>
-      <connect from_op="Numerical to Polynominal (3)" from_port="example set output" to_op="Set Role Label (2)" to_port="example set input"/>
-      <connect from_op="Set Role Label (2)" from_port="example set output" to_op="Join (4)" to_port="right"/>
-      <connect from_op="Join (4)" from_port="join" to_op="Performance k-means (2)" to_port="labelled data"/>
-      <connect from_op="Performance k-means (2)" from_port="performance" to_port="result 4"/>
+      <connect from_op="Rename to y (2)" from_port="example set output" to_op="Remove &quot;y = no&quot;" to_port="example set input"/>
+      <connect from_op="Remove &quot;y = no&quot;" from_port="example set output" to_op="Split Data (2)" to_port="example set"/>
+      <connect from_op="Split Data (2)" from_port="partition 1" to_op="Set Role y as label" to_port="example set input"/>
+      <connect from_op="Split Data (2)" from_port="partition 2" to_op="Remove y-labels (4)" to_port="example set input"/>
+      <connect from_op="Set Role y as label" from_port="example set output" to_op="SVM" to_port="training set"/>
+      <connect from_op="Remove y-labels (4)" from_port="example set output" to_op="Apply Model (2)" to_port="unlabelled data"/>
+      <connect from_op="Remove y-labels (4)" from_port="original" to_op="Join (3)" to_port="right"/>
+      <connect from_op="SVM" from_port="model" to_op="Apply Model (2)" to_port="model"/>
+      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Join (3)" to_port="left"/>
+      <connect from_op="Join (3)" from_port="join" to_op="Rename to prediction" to_port="example set input"/>
+      <connect from_op="Rename to prediction" from_port="example set output" to_op="prediction as regular" to_port="example set input"/>
+      <connect from_op="prediction as regular" from_port="example set output" to_op="Generate binary prediction" to_port="example set input"/>
+      <connect from_op="Generate binary prediction" from_port="example set output" to_op="Numerical to Binominal" to_port="example set input"/>
+      <connect from_op="Numerical to Binominal" from_port="example set output" to_op="binary as prediciton" to_port="example set input"/>
+      <connect from_op="binary as prediciton" from_port="example set output" to_op="y as label" to_port="example set input"/>
+      <connect from_op="y as label" from_port="example set output" to_op="Performance" to_port="labelled data"/>
+      <connect from_op="Performance" from_port="performance" to_port="result 3"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
       <portSpacing port="sink_result 3" spacing="0"/>
       <portSpacing port="sink_result 4" spacing="0"/>
-      <portSpacing port="sink_result 5" spacing="0"/>
     </process>
   </operator>
 </process>
