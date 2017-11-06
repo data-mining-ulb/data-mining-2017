@@ -468,7 +468,7 @@
       </operator>
       <operator activated="true" class="generate_attributes" compatibility="7.6.001" expanded="true" height="82" name="Generate binary prediction" width="90" x="1050" y="1462">
         <list key="function_descriptions">
-          <parameter key="binary" value="if(prediction &gt; 10, 1, 0)"/>
+          <parameter key="binary" value="if(prediction &gt; 1, 1, 0)"/>
         </list>
         <parameter key="keep_all" value="true"/>
       </operator>
@@ -498,7 +498,7 @@
         <parameter key="target_role" value="label"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance" width="90" x="1318" y="1309">
+      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance SVM" width="90" x="1318" y="1309">
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -576,8 +576,8 @@
       <connect from_op="Generate binary prediction" from_port="example set output" to_op="Numerical to Binominal" to_port="example set input"/>
       <connect from_op="Numerical to Binominal" from_port="example set output" to_op="binary as prediciton" to_port="example set input"/>
       <connect from_op="binary as prediciton" from_port="example set output" to_op="y as label" to_port="example set input"/>
-      <connect from_op="y as label" from_port="example set output" to_op="Performance" to_port="labelled data"/>
-      <connect from_op="Performance" from_port="performance" to_port="result 3"/>
+      <connect from_op="y as label" from_port="example set output" to_op="Performance SVM" to_port="labelled data"/>
+      <connect from_op="Performance SVM" from_port="performance" to_port="result 3"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
