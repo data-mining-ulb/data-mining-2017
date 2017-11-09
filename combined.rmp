@@ -642,7 +642,7 @@
         <list key="key_attributes"/>
         <parameter key="keep_both_join_attributes" value="false"/>
       </operator>
-      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance k-means (2)" width="90" x="1385" y="1717">
+      <operator activated="true" class="performance_classification" compatibility="7.6.001" expanded="true" height="82" name="Performance k-medoids" width="90" x="1385" y="1717">
         <parameter key="main_criterion" value="first"/>
         <parameter key="accuracy" value="true"/>
         <parameter key="classification_error" value="false"/>
@@ -736,8 +736,8 @@
       <connect from_op="Rename (2)" from_port="example set output" to_op="Numerical to Polynominal (3)" to_port="example set input"/>
       <connect from_op="Numerical to Polynominal (3)" from_port="example set output" to_op="Set Role Label (2)" to_port="example set input"/>
       <connect from_op="Set Role Label (2)" from_port="example set output" to_op="Join (4)" to_port="right"/>
-      <connect from_op="Join (4)" from_port="join" to_op="Performance k-means (2)" to_port="labelled data"/>
-      <connect from_op="Performance k-means (2)" from_port="performance" to_port="result 4"/>
+      <connect from_op="Join (4)" from_port="join" to_op="Performance k-medoids" to_port="labelled data"/>
+      <connect from_op="Performance k-medoids" from_port="performance" to_port="result 4"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <portSpacing port="sink_result 2" spacing="0"/>
